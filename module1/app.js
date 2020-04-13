@@ -17,7 +17,7 @@ function LunchCheckController($scope) {
     }
     else {
       let lunchList = $scope.lunchMenu.split(',');
-      lunchList = lunchList.filter(item => item);
+      lunchList = removeEmptyValues(lunchList);
       $scope.messageColor = "green";
 
       if(lunchList.length < 4) {
@@ -28,6 +28,10 @@ function LunchCheckController($scope) {
       }
     }
   };
+
+  function removeEmptyValues(list) {
+    return list.map(s => s.trim()).filter(item => item);
+  }
 }
 
 })();
