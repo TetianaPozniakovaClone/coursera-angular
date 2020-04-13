@@ -1,0 +1,11 @@
+input.red {
+  border:3px;
+  border-style: solid;
+  border-color: red;
+}
+
+input.green {
+  border:3px;
+  border-style: solid;
+  border-color: green;
+}
